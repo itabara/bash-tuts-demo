@@ -1,0 +1,33 @@
+#!/bin/bash
+
+read -p "What is your name? " name
+
+echo "Hello $name"
+
+read -p "How old are you? " age
+if [ $age -ge 16 ]
+then
+    echo "You can drive"
+elif [ $age -eq 15 ]
+then 
+    echo "You will drive next year"
+else
+    echo "You can't drive"
+fi
+
+if ((age == 10)); then
+    echo "Your age is: $age"
+fi
+
+if ((age > 18)); then
+    echo "Greater than 18"
+fi
+
+if (( ((age > 18)) && ((age < 22)) ));
+then
+    echo "$age is between 18 and 22"
+fi
+
+touch sample_file && vim samp_file
+
+[ -d sample_dir] || mkdir sample_dir
